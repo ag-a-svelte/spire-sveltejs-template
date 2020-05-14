@@ -1,30 +1,21 @@
 <script>
-	export let name;
+  // code here
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
-
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
+  /* styles here */
 </style>
+
+<main>
+  <div class="center">
+    <img src="favicon.png" alt="favicon" />
+    <h1>Svelte App</h1>
+    <h2>SpinSpire</h2>
+    <p>High performance, Open Source Web &amp; Mobile!</p>
+    <p>
+      <a href="https://spinspire.com/">spinspire.com</a>
+      |
+      <a href="https://youtube.com/spinspire">youtube.com/spinspire</a>
+    </p>
+  </div>
+</main>
