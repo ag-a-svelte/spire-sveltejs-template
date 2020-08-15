@@ -5,6 +5,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import preprocess from 'svelte-preprocess';
+import typescript from '@rollup/plugin-typescript';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -18,7 +19,7 @@ export default {
   },
   plugins: [
     svelte({
-      // auto preprocess: script[lang=typescript] triggers typescript preprocessing
+      // auto preprocess: script[lang="ts"] triggers typescript preprocessing
       preprocess: preprocess({
       }),
       // enable run-time checks when not in production
@@ -40,6 +41,9 @@ export default {
       dedupe: ['svelte']
     }),
     commonjs(),
+    typescript({
+      sourceMap: !production,
+    }),
 
     // In dev mode, call `npm run start` once
     // the bundle has been generated

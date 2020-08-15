@@ -1,4 +1,6 @@
-<script lang="typescript">
+<script lang="ts">
+  export let name: string = "World";
+  export let count: number = 5;
   // code here
 </script>
 
@@ -12,6 +14,9 @@
     <h1>Svelte App</h1>
     <h2>SpinSpire</h2>
     <p>High performance, Open Source Web &amp; Mobile!</p>
+    {#each Array(count) as _, i}
+      <p>Hello {name}:{i}</p>
+    {/each}
     <p>
       <a href="https://spinspire.com/">spinspire.com</a>
       |
